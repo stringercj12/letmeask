@@ -1,0 +1,62 @@
+<div class="bg-white rounded-lg p-6 flex-col border" [class.border-violet-500]="onMark">
+  <div>
+    Olá, eu gostaria de saber como criar um componente funcional dentro do React e se existe diferença na
+    perfomance
+    entre um componente com classes.
+  </div>
+
+  <div class="flex items-center justify-between gap-2 mt-4">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-full bg-violet-500 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-user text-white h-5 w-5">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </div>
+
+      <div class="text-sm font-normal text-gray-500">
+        Rachel Laguna Martinsks
+      </div>
+
+    </div>
+    <div class="flex items-center gap-4">
+      <button type="button" (click)="onMark = !onMark;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-circle-check text-gray-500 hover:text-violet-500" [class.text-violet-500]="onMark">
+          <circle cx="12" cy="12" r="10" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      </button>
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-message-square text-gray-500 hover:text-violet-500">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+      </button>
+      <button type="button" (click)="action()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-trash text-gray-500 hover:text-red-500">
+          <path d="M3 6h18" />
+          <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+          <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+
+  <div>
+    <textarea name="answer" id="answer" placeholder="Escreva aqui..."
+      class="mt-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-4  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-violet-500 dark:focus:border-violet-500"></textarea>
+
+    <button class="p-3 bg-violet-500 mt-4 rounded-lg text-white">
+      Responder
+    </button>
+  </div>
+</div>

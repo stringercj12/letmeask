@@ -1,0 +1,46 @@
+<div class="grid grid-cols-1 md:grid-cols-2 w-screen h-screen">
+  <div class="bg-violet-500 hidden md:flex items-start justify-end flex-col pl-24 pb-32">
+    <img src="./assets/vector-login.svg" alt="Máscara de uma pessoa" />
+
+    <h2 class="text-4xl font-bold text-white pb-4">
+      Toda pergunta tem <br /> uma resposta.
+    </h2>
+    <p class="text-2xl font-normal text-white">
+      Aprenda e compartilhe conhecimento<br />
+      com outras pessoas
+    </p>
+  </div>
+  <div class="flex items-center justify-center">
+    <form action="" class="w-96 flex-col flex items-center justify-center">
+
+      <img src="/assets/logo.svg" alt="Logo" class="mb-14" />
+
+      <h3 class="text-2xl font-bold text-gray-700 pb-4">
+        Criar uma nova sala
+      </h3>
+
+      <input type="text"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-4  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-violet-500 dark:focus:border-violet-500"
+        placeholder="Nome da sala" name="nomeDaSala" [(ngModel)]="nomeDaSala" />
+        {{nomeDaSala}}
+
+      <button class="w-full flex items-center justify-center bg-violet-500 py-4 px-12 rounded-lg gap-2 mt-4"
+        routerLink="../{{nomeDaSala}}">
+        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 18 16">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
+        </svg>
+        <span class="text-base font-medium text-white">
+          Entrar na sala
+        </span>
+      </button>
+
+      <div class="text-gray-500 text-sm font-normal pt-4">
+        Quer entrar em uma sala já existente? <a routerLink="/" class="text-[#E559F9] font-normal text-sm underline">
+          Clique aqui</a>
+      </div>
+    </form>
+  </div>
+
+</div>
